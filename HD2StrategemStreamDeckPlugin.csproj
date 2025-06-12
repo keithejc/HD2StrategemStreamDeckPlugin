@@ -25,16 +25,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="install-interception.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="6.0.0-dev-00265" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
     <PackageReference Include="Tech.Aerove.StreamDeck.Client" Version="0.7.11-beta" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Interceptor">
-      <HintPath>bin\Debug\net6.0\Interceptor.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="Interceptor\Interceptor\Interceptor.csproj">
+      <Private></Private>
+      <CopyLocalSatelliteAssemblies></CopyLocalSatelliteAssemblies>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -365,25 +371,16 @@
     <None Update="icons\Weapons\HD2-WAS.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="interception.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Interception\command line installer\install-interception.exe">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Interception\library\x64\interception.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="PropertyInspector\ActionSettings.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\actionimage%402x.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\actionimage.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\default%402x.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\default.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\image%402x.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="PropertyInspector\images\image.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
