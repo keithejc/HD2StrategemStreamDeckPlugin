@@ -1,0 +1,43 @@
+{
+  "SDKVersion": 2,
+  "Author": "Keith Cassidy",
+  "CodePath": "HD2StrategemStreamDeckPlugin.exe",
+  "CodePathMac": "HD2StrategemStreamDeckPlugin",
+  "Category": "HD2 Stratagems",
+  "CategoryIcon": "PropertyInspector/images/actionImage",
+  "PropertyInspectorPath": "PropertyInspector/DemoAction.html",
+  "Description": "Helldivers 2 Stratagem macro with cooldown",
+  "Name": "HD2 Stratagem Macros",
+  "Icon": "PropertyInspector/images/default",
+  "URL": "keithcassidy.com/hd2stratagem",
+  "Version": "1.0",
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "5.0"
+  },
+  "Actions": [
+    {
+      "Icon": "icons/HD2-Config",
+      "Name": "Stratagem Macro",
+      "States": [
+        {
+          "Image": "icons/HD2-Config",
+          "TitleAlignment": "bottom"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Stratagem with cooldown counter.",
+      "UUID": "com.keithcassidy.hd2stratagem.macrowithcooldown",
+      "PropertyInspectorPath": "PropertyInspector/ActionSettings.html"
+    }
+  ]
+}
