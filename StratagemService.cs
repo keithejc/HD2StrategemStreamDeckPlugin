@@ -22,6 +22,9 @@ namespace HD2StrategemStreamDeckPlugin
         private object lockActionThreads = new object();
         private object lockDictionary = new object();
 
+        private const int interPressDelay = 40;
+        private const int interKeyDelay = 80;
+
         public StratagemService(ILogger<StratagemService> logger, EventManager eventsManager, IElgatoDispatcher dispatcher)
         {
             _logger = logger;
@@ -63,37 +66,37 @@ namespace HD2StrategemStreamDeckPlugin
                 string buttons = Stratagem.GetStratagemButtons(stratagemId);
 
                 input.SendKey(Keys.Home, KeyState.Down | KeyState.E0);
-                Thread.Sleep(1);
+                Thread.Sleep(interPressDelay);
                 input.SendKey(Keys.Home, KeyState.Up | KeyState.E0);
-                Thread.Sleep(1);
+                Thread.Sleep(100);
 
                 foreach (var item in buttons)
                 {
                     if (item == 'u')
                     {
                         input.SendKey(Keys.Up, KeyState.Down | KeyState.E0);
-                        Thread.Sleep(1);
+                        Thread.Sleep(interPressDelay);
                         input.SendKey(Keys.Up, KeyState.Up | KeyState.E0);
                     }
                     else if (item == 'd')
                     {
                         input.SendKey(Keys.Down, KeyState.Down | KeyState.E0);
-                        Thread.Sleep(1);
+                        Thread.Sleep(interPressDelay);
                         input.SendKey(Keys.Down, KeyState.Up | KeyState.E0);
                     }
                     else if (item == 'l')
                     {
                         input.SendKey(Keys.Left, KeyState.Down | KeyState.E0);
-                        Thread.Sleep(1);
+                        Thread.Sleep(interPressDelay);
                         input.SendKey(Keys.Left, KeyState.Up | KeyState.E0);
                     }
                     else if (item == 'r')
                     {
                         input.SendKey(Keys.Right, KeyState.Down | KeyState.E0);
-                        Thread.Sleep(1);
+                        Thread.Sleep(interPressDelay);
                         input.SendKey(Keys.Right, KeyState.Up | KeyState.E0);
                     }
-                    Thread.Sleep(1);
+                    Thread.Sleep(interKeyDelay);
                 }
             }
 
@@ -207,14 +210,14 @@ namespace HD2StrategemStreamDeckPlugin
         private void OnWillAppear(object? sender, WillAppearEvent e)
         {
             //get correct stratagem and show icon
-            _logger.LogInformation("OnWillAppear settings {event}", e.Payload.Settings);
+            _logger.LogDebug("OnWillAppear settings {event}", e.Payload.Settings);
 
             ApplySettings(e.Context, e.Payload.Settings);
         }
 
         public void DidReceiveSettings(object? sender, DidReceiveSettingsEvent e)
         {
-            _logger.LogInformation("DidReceiveSettings {event}", e.Payload.Settings.ToString());
+            _logger.LogDebug("DidReceiveSettings {event}", e.Payload.Settings.ToString());
             // _elgatoDispatcher.ShowOk(e.Context);
 
             ApplySettings(e.Context, e.Payload.Settings);
@@ -222,7 +225,7 @@ namespace HD2StrategemStreamDeckPlugin
 
         public void DidReceiveGlobalSettings(object? sender, DidReceiveGlobalSettingsEvent e)
         {
-            _logger.LogInformation("StratagemService Received event {event}", e.Event);
+            _logger.LogDebug("StratagemService Received event {event}", e.Event);
         }
     }
 }

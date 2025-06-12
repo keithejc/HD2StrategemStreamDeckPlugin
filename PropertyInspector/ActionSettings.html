@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="sdpi-wrapper">
-        <details class="message info">
+        <details class="message">
             <summary>Select a stratagem and optionally add a number of seconds to count down the cooldown period.</summary>
         </details>
 
@@ -23,8 +23,82 @@
                 Stratagem:
                 <select class="sdProperty" id="stratagemId" oninput="setSettings()">
                     <option disabled selected value>Select a stratagem</option>
+                    <option value="35">Orbital Gatling Barrage</option>
+                    <option value="36">Orbital Airburst Strike</option>
+                    <option value="37">Orbital 120mm HE Barrage</option>
+                    <option value="38">Orbital 380mm HE Barrage</option>
+                    <option value="39">Orbital Walking Barrage</option>
+                    <option value="40">Orbital Laser</option>
+                    <option value="41">Orbital Railcannon Strike</option>
                     <option value="42">Orbital Precision Strike</option>
-                    <option value="47">EagleAirstrike</option>
+                    <option value="43">Orbital Gas Strike</option>
+                    <option value="44">Orbital EMS Strike</option>
+                    <option value="45">Orbital Smoke Strike</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="46">Eagle Strafing Run</option>
+                    <option value="47">Eagle Airstrike</option>
+                    <option value="48">Eagle Cluster Bomb</option>
+                    <option value="49">Eagle Napalm Airstrike</option>
+                    <option value="50">Eagle Smoke Strike</option>
+                    <option value="51">Eagle 110MM Rocket Pods</option>
+                    <option value="52">Eagle 500kg Bomb</option>
+                    <option value="54">Eagle Rearm</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="6">Machine Gun</option>
+                    <option value="7">Anti Materiel Rifle</option>
+                    <option value="8">Stalwart</option>
+                    <option value="9">Expendable Antitank</option>
+                    <option value="10">Recoilless Rifle</option>
+                    <option value="11">Flamethrower</option>
+                    <option value="12">Autocannon</option>
+                    <option value="13">Heavy Machine Gun</option>
+                    <option value="14">Airburst Rocket Launcher</option>
+                    <option value="15">Commando</option>
+                    <option value="16">Railgun</option>
+                    <option value="17">SPEAR Launcher</option>
+                    <option value="18">Grenade Launcher</option>
+                    <option value="19">Laser Cannon</option>
+                    <option value="20">Arc Thrower</option>
+                    <option value="21">Quasar Cannon</option>
+                    <option value="64">WASP Launcher</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="24">HMG Emplacement</option>
+                    <option value="25">Shield Generator Relay</option>
+                    <option value="26">Tesla Tower</option>
+                    <option value="27">Anti Personnel Minefield</option>
+                    <option value="28">Incendiary Mines</option>
+                    <option value="29">Machine Gun Sentry</option>
+                    <option value="30">Gatling Sentry</option>
+                    <option value="31">Mortar Sentry</option>
+                    <option value="32">Autocannon Sentry</option>
+                    <option value="33">Rocket Sentry</option>
+                    <option value="34">Mortar Sentry</option>
+                    <option value="59">Gas Mines</option>
+                    <option value="60">Anti Tank Emplacement</option>
+                    <option value="61">Anti Tank Mines</option>
+                    <option value="62">Grenadier Battlement</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="22">Patriot Exosuit</option>
+                    <option value="23">Emancipator Exosuit</option>
+                    <option value="65">Fast Recon Vehicle</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="53">Resupply</option>
+                    <option value="55">Reinforce</option>
+                    <option value="56">SOS Beacon</option>
+                    <option value="57">Hell Bomb</option>
+                    <option value="58">SEAF Artillery</option>
+                    <option disabled selected value>-------------</option>
+                    <option value="63">Hover Pack</option>
+                    <option value="66">Directional Shield Backpack</option>
+                    <option value="67">Guard Dog Dog Breath</option>
+                    <option value="68">Portable Hellbomb</option>
+                    <option value="0">Jump Pack</option>
+                    <option value="1">B1 Supply Pack</option>
+                    <option value="2">Guard Dog Rover</option>
+                    <option value="3">Ballistic Shield Backpack</option>
+                    <option value="4">Shield Generator Pack</option>
+                    <option value="5">Guard Dog</option>
+
                 </select>
             </summary>
         </details>
@@ -37,7 +111,7 @@
         </div>
 
         <div class="sdpi-item">
-            <div class="sdpi-item-label">Cooldown seconds</div>
+            <div class="sdpi-item-label">Cooldown:</div>
             <input class="sdProperty" id="cooldown" oninput="setSettings()">
         </div>
     </div>

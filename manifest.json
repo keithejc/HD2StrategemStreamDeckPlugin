@@ -2,14 +2,14 @@
   "SDKVersion": 2,
   "Author": "Keith Cassidy",
   "CodePath": "HD2StrategemStreamDeckPlugin.exe",
-  "CodePathMac": "HD2StrategemStreamDeckPlugin",
-  "Category": "HD2 Stratagems",
+  "Category": "HD2 Stratagem Macros",
   "CategoryIcon": "icons/Factions/HD2-Faction-Helldiver",
-  "PropertyInspectorPath": "PropertyInspector/DemoAction.html",
+  "PropertyInspectorPath": "PropertyInspector/ActionSettings.html",
   "Description": "Helldivers 2 Stratagem macro with cooldown",
   "Name": "HD2 Stratagem Macros",
   "Icon": "icons/Factions/HD2-Faction-Helldiver",
-  "URL": "keithcassidy.com/hd2stratagem",
+  "URL": "https://keithcassidy.com/hd2stratagem",
+  "UUID": "com.keithcassidy.hd2stratagem",
   "Version": "1.0",
   "OS": [
     {
@@ -18,7 +18,7 @@
     }
   ],
   "Software": {
-    "MinimumVersion": "5.0"
+    "MinimumVersion": "6.9"
   },
   "Actions": [
     {
