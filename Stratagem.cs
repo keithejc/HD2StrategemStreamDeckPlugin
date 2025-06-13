@@ -130,12 +130,12 @@ namespace HD2StrategemStreamDeckPlugin
                 case StratagemId.FX12ShieldGeneratorRelay: return "Emplacements/HD2-SG";
                 case StratagemId.AARC3TeslaTower: return "Emplacements/HD2-TT";
 
-                case StratagemId.AMG43MachineGunSentry: return "Emplacements/HD2-";
-                case StratagemId.AG16GatlingSentry: return "Emplacements/HD2-";
-                case StratagemId.AM12MortarSentry: return "Emplacements/HD2-";
-                case StratagemId.AAC8AutocannonSentry: return "Emplacements/HD2-";
-                case StratagemId.AMLS4XRocketSentry: return "Emplacements/HD2-";
-                case StratagemId.AM23EMSMortarSentry: return "Emplacements/HD2-";
+                case StratagemId.AMG43MachineGunSentry: return "Sentries/HD2-MGS";
+                case StratagemId.AG16GatlingSentry: return "Sentries/HD2-GS";
+                case StratagemId.AM12MortarSentry: return "Sentries/HD2-MS";
+                case StratagemId.AAC8AutocannonSentry: return "Sentries/HD2-AS";
+                case StratagemId.AMLS4XRocketSentry: return "Sentries/HD2-RS";
+                case StratagemId.AM23EMSMortarSentry: return "Sentries/HD2-EMS";
 
                 case StratagemId.OrbitalGatlingBarrage: return "Orbital/HD2-EGB";
                 case StratagemId.Orbital120MMHEBarrage: return "Orbital/HD2-O120";
